@@ -1,0 +1,42 @@
+{
+  "name": "node-cursor-agent",
+  "version": "0.4.1",
+  "description": "TypeScript/Node SDK wrapper around the cursor-agent CLI for non-interactive usage (print/json/stream-json)",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "rm -rf dist && bun build ./src/index.ts --outdir ./dist --target node --format esm && bun build ./src/server.ts --outdir ./dist --target bun --format esm",
+    "test": "bun test",
+    "start:server": "bun ./dist/server.js",
+    "dev:server": "bun run ./src/server.ts",
+    "lint": "echo 'no linter configured'"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "cursor-agent",
+    "sdk",
+    "wrapper",
+    "non-interactive",
+    "cli",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://example.com/node-cursor-agent.git"
+  },
+  "bugs": {
+    "url": "https://example.com/node-cursor-agent/issues"
+  },
+  "homepage": "https://example.com/node-cursor-agent#readme",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "node-pty": "^1.0.0"
+  }
+}
